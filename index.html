@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding the SHA256 hash</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #fffaff;
+      }
+      /* wrapper */
+      #wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #0a2463;
+        padding: 16px;
+      }
+      /* sha256-hash */
+      #sha256-hash {
+        background-color: #2C76A7;
+        padding: 16px;
+        border-radius: 8px;
+        color: #fffaff;
+      }
+      #sha256-hash::before {
+        content: 'SHA256 Hash';
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      /* user-input */
+      #user-input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 16px;
+      }
+
+      #user-input input {
+        padding: 8px;
+        border-radius: none;
+        border: 3px solid #0a2463;
+        margin-right: 8px;
+      }
+
+      #user-input input:focus {
+        outline: none;
+      }
+
+      #user-input button {
+        padding: 8px;
+        border-radius: none;
+        border: 3px solid #0a2463;
+        background-color: #2C76A7;
+        color: #fffaff;
+        font-weight: bold;
+      }
+
+      /* result div */
+      #result {
+        margin-top: 16px;
+        background-color: #3e92cc;
+        padding: 8px;
+        border-radius: none;
+        color: #fffaff;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <span id="sha256-hash"></span>
+      <div id="user-input">
+        <input type="text" id="pin" />
+        <button id="check">Check</button>
+      </div>
+      <div id="result" class="hidden"></div>
+    </div>
+    <script src="script.js" async></script>
+  </body>
+</html>
