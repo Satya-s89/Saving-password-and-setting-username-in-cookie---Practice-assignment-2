@@ -77,16 +77,25 @@
       .hidden {
         display: none;
       }
+
+      .success {
+        background-color: #4CAF50 !important;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
     <div id="wrapper">
+      <h1 style="text-align: center; color: #0a2463; margin-bottom: 20px;">SHA256 Hash Cracker</h1>
+      <p style="text-align: center; margin-bottom: 20px;">Try to guess the 3-digit number (100-999) that produces this SHA256 hash:</p>
       <span id="sha256-hash"></span>
       <div id="user-input">
-        <input type="text" id="pin" />
+        <input type="text" id="pin" placeholder="Enter 3-digit number" />
         <button id="check">Check</button>
       </div>
       <div id="result" class="hidden"></div>
+      <button id="hint" style="margin-top: 16px;">Get Hint</button>
+      <div id="hint-text" class="hidden" style="margin-top: 8px; color: #0a2463;"></div>
     </div>
     <script src="script.js" async></script>
   </body>
